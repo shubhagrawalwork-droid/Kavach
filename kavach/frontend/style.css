@@ -1,0 +1,169 @@
+:root {
+  --bg: #0f1115;
+  --card: #181b22;
+  --text: #f4f5f7;
+  --muted: #a3a8b5;
+  --red: #e5383b;
+  --red-dark: #a4161a;
+  --green: #2bb673;
+  --yellow: #f4b400;
+  --radius: 20px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 28px; font-weight: 700; }
+.shield { font-size: 32px; }
+.privacy { color: var(--muted); font-size: 16px; }
+
+.hero { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+
+.kavach-btn {
+  width: min(320px, 80vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  background: radial-gradient(circle at 35% 30%, #ff5a5f, var(--red) 55%, var(--red-dark));
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 20px 60px rgba(229, 56, 59, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.kavach-btn:active { transform: scale(0.97); }
+.btn-main { font-size: clamp(36px, 9vw, 56px); font-weight: 800; letter-spacing: 3px; }
+.btn-sub { font-size: 16px; max-width: 70%; line-height: 1.3; opacity: 0.95; }
+
+.status { font-size: clamp(22px, 5vw, 30px); font-weight: 700; margin: 0; text-align: center; }
+
+.transcript-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.transcript-card h2 { margin: 0 0 12px; font-size: 18px; color: var(--muted); font-weight: 600; }
+.transcript { display: flex; flex-direction: column; gap: 10px; max-height: 45vh; overflow-y: auto; }
+.transcript p { margin: 0; font-size: clamp(20px, 4.5vw, 26px); line-height: 1.45; }
+.transcript .placeholder { color: var(--muted); font-size: 18px; }
+
+.error {
+  background: rgba(229, 56, 59, 0.15);
+  border: 1px solid var(--red);
+  color: #ffd6d6;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+/* listening state: green shield */
+.app[data-state="listening"] .kavach-btn {
+  background: radial-gradient(circle at 35% 30%, #4fe3a0, var(--green) 55%, #17804f);
+  box-shadow: 0 0 0 0 rgba(43, 182, 115, 0.6);
+  animation: pulse 2s infinite;
+}
+.app[data-state="listening"] .status { color: var(--green); }
+.app[data-state="listening"] .transcript-card { border-color: rgba(43, 182, 115, 0.5); }
+.app[data-state="connecting"] .status { color: var(--yellow); }
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0.55); }
+  70% { box-shadow: 0 0 0 28px rgba(43, 182, 115, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app[data-state="listening"] .kavach-btn { animation: none; }
+}
+
+/* ---------- Milestone 2-5: risk, warnings, alert, after-call, demo ---------- */
+.risk-card, .speak-card, .alert-card, .after-card, .demo {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+}
+.risk-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.risk-label { font-size: clamp(24px, 5.5vw, 34px); font-weight: 800; color: var(--green); }
+.risk-score { font-size: 22px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter { height: 16px; background: #262a33; border-radius: 99px; margin: 14px 0 10px; overflow: hidden; }
+.meter-fill { height: 100%; width: 3%; background: var(--green); border-radius: 99px; transition: width 0.5s ease, background 0.3s ease; }
+.risk-type { margin: 0; font-size: 20px; font-weight: 600; }
+.flags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.flag { background: rgba(229, 56, 59, 0.18); border: 1px solid rgba(229, 56, 59, 0.5); border-radius: 99px; padding: 4px 12px; font-size: 16px; }
+
+.app[data-level="yellow"] .risk-label { color: var(--yellow); }
+.app[data-level="yellow"] .meter-fill { background: var(--yellow); }
+.app[data-level="red"] .risk-label { color: #ff6b6e; }
+.app[data-level="red"] .meter-fill { background: var(--red); }
+.app[data-level="red"] .risk-card { border: 3px solid var(--red); animation: alarm 1s infinite alternate; }
+@keyframes alarm { from { box-shadow: 0 0 0 0 rgba(229, 56, 59, 0.4); } to { box-shadow: 0 0 30px 4px rgba(229, 56, 59, 0.45); } }
+
+.speak-card { display: flex; gap: 14px; align-items: center; }
+.speak-icon { font-size: 30px; }
+.speak-card p { margin: 0; font-size: clamp(20px, 4.5vw, 26px); font-weight: 600; line-height: 1.4; }
+
+.alert-card { border: 2px solid var(--green); }
+.alert-card h2, .after-card h2 { margin: 0 0 12px; font-size: 22px; }
+.alert-card pre, .complaint {
+  white-space: pre-wrap; font-family: inherit; font-size: 17px; line-height: 1.5;
+  background: #11141a; border-radius: 12px; padding: 14px; margin: 0;
+}
+
+.after-card { border: 2px solid var(--yellow); display: flex; flex-direction: column; gap: 14px; }
+#helpBox { display: flex; flex-direction: column; gap: 14px; }
+#helpBox[hidden] { display: none; }
+.choice { display: flex; gap: 12px; flex-wrap: wrap; }
+.big {
+  flex: 1 1 200px; min-height: 64px; font-size: 22px; font-weight: 700; border-radius: 16px;
+  border: 2px solid #3a3f4b; background: #232731; color: var(--text); cursor: pointer;
+  text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 10px;
+}
+.big.yes { background: var(--red-dark); border-color: var(--red); }
+.big.no { background: #17804f; border-color: var(--green); }
+.big.primary { background: #1f4fd1; border-color: #4f7cff; }
+.big:disabled { opacity: 0.6; }
+.call-1930 {
+  display: block; text-align: center; font-size: 30px; font-weight: 800; padding: 18px;
+  border-radius: 18px; background: var(--red); color: #fff; text-decoration: none;
+}
+.hint { margin: 0; color: var(--muted); font-size: 17px; }
+#helpBox label { font-size: 19px; font-weight: 600; }
+textarea {
+  width: 100%; font-size: 19px; font-family: inherit; padding: 12px; border-radius: 12px;
+  background: #11141a; color: var(--text); border: 1px solid #3a3f4b;
+}
+
+.demo summary { cursor: pointer; font-size: 18px; color: var(--muted); }
+.demo-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.demo-btn {
+  font-size: 17px; padding: 12px 16px; border-radius: 12px; border: 1px solid #3a3f4b;
+  background: #232731; color: var(--text); cursor: pointer;
+}
+[hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .app[data-level="red"] .risk-card { animation: none; }
+}

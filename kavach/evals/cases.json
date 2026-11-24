@@ -1,0 +1,275 @@
+[
+ {
+  "id": "cbi_parcel_drugs",
+  "scam": true,
+  "lines": [
+   "हेलो, मैं मुंबई कस्टम से बोल रहा हूँ।",
+   "आपके नाम का पार्सल पकड़ा गया है, उसमें ड्रग्स हैं।",
+   "अब आपकी कॉल CBI को ट्रांसफर हो रही है।",
+   "आप digital arrest में हैं, कॉल मत काटिए।"
+  ]
+ },
+ {
+  "id": "cbi_money_laundering",
+  "scam": true,
+  "lines": [
+   "Main CBI officer Vikram Singh bol raha hoon.",
+   "Aapke Aadhaar se money laundering hui hai.",
+   "Kisi ko mat batana, warna giraftar ho jaoge.",
+   "Saare paise verification account mein transfer kijiye."
+  ]
+ },
+ {
+  "id": "police_warrant",
+  "scam": true,
+  "lines": [
+   "हम दिल्ली पुलिस से बोल रहे हैं।",
+   "आपके खिलाफ अरेस्ट वारंट निकला है।",
+   "अगर अभी जुर्माना जमा नहीं किया तो जेल जाना पड़ेगा।"
+  ]
+ },
+ {
+  "id": "trai_sim_block",
+  "scam": true,
+  "lines": [
+   "Main TRAI se bol rahi hoon.",
+   "Aapka mobile number do ghante mein band ho jayega.",
+   "Aapke number se illegal ads bheje gaye hain, police case darj hai."
+  ]
+ },
+ {
+  "id": "bank_kyc_otp",
+  "scam": true,
+  "lines": [
+   "नमस्ते, मैं HDFC बैंक से बोल रहा हूँ।",
+   "आपका KYC पेंडिंग है, अकाउंट ब्लॉक हो जाएगा।",
+   "अभी जो OTP आया है वो बताइए।"
+  ]
+ },
+ {
+  "id": "upi_pin",
+  "scam": true,
+  "lines": [
+   "Sir aapke account mein 5000 ka refund aaya hai.",
+   "Refund lene ke liye apna UPI PIN daaliye.",
+   "Jaldi kijiye, link expire ho jayega."
+  ]
+ },
+ {
+  "id": "anydesk_refund",
+  "scam": true,
+  "lines": [
+   "आपका बिजली का पैसा डबल कट गया है, रिफंड मिलेगा।",
+   "इसके लिए AnyDesk ऐप डाउनलोड कीजिए।",
+   "फिर जो कोड आए वो मुझे बताइए।"
+  ]
+ },
+ {
+  "id": "electricity_cut",
+  "scam": true,
+  "lines": [
+   "Bijli vibhag se baat kar rahe hain.",
+   "Aaj raat aapki light kaat di jayegi.",
+   "Turant is number par payment kijiye."
+  ]
+ },
+ {
+  "id": "lottery_kbc",
+  "scam": true,
+  "lines": [
+   "बधाई हो, आपने KBC में 25 लाख का इनाम जीता है।",
+   "इनाम पाने के लिए प्रोसेसिंग फीस 15000 रुपये जमा कीजिए।",
+   "यह बात किसी को मत बताइए।"
+  ]
+ },
+ {
+  "id": "son_accident",
+  "scam": true,
+  "lines": [
+   "Mummy main bol raha hoon, mera accident ho gaya hai.",
+   "Main thane mein hoon, police wale chhod nahi rahe.",
+   "Jaldi 50000 is number par bhej do, papa ko mat batana."
+  ]
+ },
+ {
+  "id": "customs_fedex",
+  "scam": true,
+  "lines": [
+   "This is FedEx calling about your parcel.",
+   "Customs found drugs in it and an FIR is registered.",
+   "You must transfer money immediately to clear your name."
+  ]
+ },
+ {
+  "id": "income_tax_raid",
+  "scam": true,
+  "lines": [
+   "Main income tax department se bol raha hoon.",
+   "Aapke account par case darj hoga aur arrest ho sakta hai.",
+   "Abhi ke abhi penalty jama kijiye."
+  ]
+ },
+ {
+  "id": "video_call_judge",
+  "scam": true,
+  "lines": [
+   "सुप्रीम कोर्ट के जज से वीडियो कॉल पर बात कराते हैं।",
+   "आप पर मनी लॉन्ड्रिंग का केस है।",
+   "अपनी FD तोड़कर पैसे सेफ अकाउंट में डालिए।"
+  ]
+ },
+ {
+  "id": "card_cvv",
+  "scam": true,
+  "lines": [
+   "Sir aapka credit card block ho gaya hai.",
+   "Card ke peeche wala CVV bataiye.",
+   "Aur jo OTP aayega wo bhi bata dijiye."
+  ]
+ },
+ {
+  "id": "screen_share",
+  "scam": true,
+  "lines": [
+   "Aapke bank app mein problem hai.",
+   "Screen share kijiye, main theek kar deta hoon.",
+   "Kisi ko nahi batana, yeh confidential hai."
+  ]
+ },
+ {
+  "id": "ncb_narcotics",
+  "scam": true,
+  "lines": [
+   "मैं नारकोटिक्स विभाग से इंस्पेक्टर बोल रहा हूँ।",
+   "आपके नाम से ड्रग्स का पार्सल पकड़ा गया है।",
+   "तुरंत वेरिफिकेशन के लिए पैसे ट्रांसफर कीजिए।"
+  ]
+ },
+ {
+  "id": "pension_kyc",
+  "scam": true,
+  "lines": [
+   "Aapki pension ruk jayegi, KYC update nahi hai.",
+   "Main bank se bol raha hoon, OTP bata dijiye.",
+   "Aaj hi karna hoga."
+  ]
+ },
+ {
+  "id": "gas_connection",
+  "scam": true,
+  "lines": [
+   "आपका गैस कनेक्शन बंद कर दिया जाएगा।",
+   "KYC अपडेट नहीं हुआ है।",
+   "अभी इस नंबर पर पेमेंट कीजिए।"
+  ]
+ },
+ {
+  "id": "crime_branch_secret",
+  "scam": true,
+  "lines": [
+   "Main crime branch se inspector bol raha hoon.",
+   "Aapka beta case mein fasa hai.",
+   "Kisi ko mat bataiye, warna use arrest kar lenge.",
+   "Paise bhejiye abhi."
+  ]
+ },
+ {
+  "id": "rbi_safe_account",
+  "scam": true,
+  "lines": [
+   "I am calling from RBI.",
+   "Your account is used for fraud and will be suspended.",
+   "Move all your money to a safe account immediately."
+  ]
+ },
+ {
+  "id": "son_weekend",
+  "scam": false,
+  "lines": [
+   "हाँ पापा, प्रणाम। कैसे हो?",
+   "दवाई टाइम पर ले रहे हो ना?",
+   "मैं संडे को घर आ रहा हूँ।"
+  ]
+ },
+ {
+  "id": "doctor_reminder",
+  "scam": false,
+  "lines": [
+   "Namaste, City Hospital se bol rahe hain.",
+   "Kal subah das baje aapka appointment hai Dr. Mehta ke saath.",
+   "Khaali pet aaiyega, blood test hai."
+  ]
+ },
+ {
+  "id": "daughter_recipe",
+  "scam": false,
+  "lines": [
+   "Mummy, woh kadhi ki recipe batao na.",
+   "Kitna besan daalna hai?",
+   "Achha theek hai, shaam ko video call karti hoon."
+  ]
+ },
+ {
+  "id": "bank_genuine_reminder",
+  "scam": false,
+  "lines": [
+   "नमस्ते, मैं बैंक से बोल रही हूँ।",
+   "आपकी FD अगले महीने मैच्योर हो रही है।",
+   "कृपया ब्रांच आकर फॉर्म भर दीजिए, कोई जल्दी नहीं है।"
+  ]
+ },
+ {
+  "id": "friend_temple",
+  "scam": false,
+  "lines": [
+   "Arre Sharma ji, kal mandir chal rahe ho?",
+   "Subah saat baje nikalenge.",
+   "Bhabhi ji ko bhi le aana."
+  ]
+ },
+ {
+  "id": "delivery_boy",
+  "scam": false,
+  "lines": [
+   "Sir aapka Amazon parcel aaya hai.",
+   "Main gate par khada hoon.",
+   "Neeche aa jaiye please."
+  ]
+ },
+ {
+  "id": "grandson_exam",
+  "scam": false,
+  "lines": [
+   "Dadi, mera exam achha gaya!",
+   "Maths mein 95 aaye.",
+   "Aap ke aashirwaad se."
+  ]
+ },
+ {
+  "id": "electrician",
+  "scam": false,
+  "lines": [
+   "Main electrician bol raha hoon, kal aaunga.",
+   "Fan ka capacitor badalna hai.",
+   "Do sau rupaye lagenge."
+  ]
+ },
+ {
+  "id": "cousin_wedding",
+  "scam": false,
+  "lines": [
+   "Bhaiya ki shaadi December mein hai.",
+   "Aap sab ko aana hai.",
+   "Card bhej diya hai WhatsApp par."
+  ]
+ },
+ {
+  "id": "neighbour_police_nephew",
+  "scam": false,
+  "lines": [
+   "Mera bhatija police mein bharti ho gaya.",
+   "Training ke liye Moradabad gaya hai.",
+   "Mithai lekar aaungi kal."
+  ]
+ }
+]

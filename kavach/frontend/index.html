@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kavach</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="app" id="app" data-state="idle" data-level="green">
+    <header class="top">
+      <div class="brand">
+        <span class="shield" aria-hidden="true">🛡</span>
+        <span class="name">Kavach</span>
+      </div>
+      <span class="privacy">Aapki awaaz record nahi hoti</span>
+    </header>
+
+    <section class="hero">
+      <button id="kavachBtn" class="kavach-btn" aria-pressed="false">
+        <span class="btn-main">KAVACH</span>
+        <span class="btn-sub" id="btnSub">Dabaiye aur call speaker pe rakhiye</span>
+      </button>
+      <p class="status" id="status">Taiyaar hai</p>
+    </section>
+
+    <section class="risk-card" id="riskCard" hidden>
+      <div class="risk-head">
+        <span class="risk-label" id="riskLabel">Sab theek hai</span>
+        <span class="risk-score" id="riskScore">0</span>
+      </div>
+      <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+      <p class="risk-type" id="riskType"></p>
+      <div class="flags" id="flags"></div>
+    </section>
+
+    <section class="speak-card" id="speakCard" hidden>
+      <span class="speak-icon" aria-hidden="true">🔊</span>
+      <p id="speakText"></p>
+    </section>
+
+    <section class="alert-card" id="alertCard" hidden>
+      <h2 id="alertTitle">Parivaar ko WhatsApp bheja gaya</h2>
+      <pre id="alertBody"></pre>
+    </section>
+
+    <section class="after-card" id="afterCard" hidden>
+      <h2>Kya aapne kisi ko paise bheje?</h2>
+      <div class="choice">
+        <button class="big yes" id="sentYes">Haan, bheje</button>
+        <button class="big no" id="sentNo">Nahi</button>
+      </div>
+      <div id="helpBox" hidden>
+        <a class="call-1930" href="tel:1930">📞 1930 par call kijiye</a>
+        <p class="hint">Jitni jaldi call karenge, paise rukne ka mauka utna zyada.</p>
+        <label for="description">Kya hua, bolkar ya likhkar bataiye</label>
+        <textarea id="description" rows="4" placeholder="Jaise: maine 50,000 rupaye UPI se bheje..."></textarea>
+        <div class="choice">
+          <button class="big" id="speakDesc">🎤 Bolkar bataiye</button>
+          <button class="big primary" id="makeComplaint">Shikayat taiyaar kijiye</button>
+        </div>
+        <pre class="complaint" id="complaintText" hidden></pre>
+        <div class="choice" id="complaintActions" hidden>
+          <button class="big" id="copyComplaint">Copy kijiye</button>
+          <a class="big link" href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in kholiye</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="transcript-card">
+      <h2>Call mein kya bola ja raha hai</h2>
+      <div id="transcript" class="transcript" aria-live="polite">
+        <p class="placeholder">Kavach shuru karne ke baad yahan baat-cheet dikhegi.</p>
+      </div>
+    </section>
+
+    <details class="demo">
+      <summary>Demo mode (bina call ke try kijiye)</summary>
+      <div class="demo-buttons" id="demoButtons"></div>
+    </details>
+
+    <p class="error" id="error" role="alert" hidden></p>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
